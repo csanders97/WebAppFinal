@@ -1,0 +1,96 @@
+{
+    "activity": [
+        {
+            "snow": {
+                "basketball": {
+                    "name": "Basketball",
+                    "type": "gym"
+                },
+                "snowboarding": {
+
+                },
+                "skiing": {
+
+                },
+                "sledding": {
+
+                }
+            },
+            "rain": {
+                "basketball": {
+                    "name": "Basketball",
+                    "type": "gym"
+                }
+            },
+            "cloud": {
+
+            },
+            "sun": {
+                "basketball": {
+                    "name": "Basketball",
+                    "type": "park"
+                },
+                "baseball": {
+                    "name": "Baseball",
+                    "type": "park"
+                },
+                "football": {
+                    "name": "Football",
+                    "type": "park"
+                },
+                "frisbee": {
+                    "name": "Frisbee",
+                    "type": "park"
+                },
+                "golf": {
+                    "name": "Golf"
+                },
+                // "biking": [
+
+                // ],
+                "amusementPark": {
+                    "name": "Amusement Park",
+                    "type": "amusement_park"
+                },
+                "camping": {
+                    "name": "Camping",
+                    "type": "campground"
+                }
+            },
+            "all": {
+                "bowling": {
+                    "name": "bowling",
+                    "type": "bowling_alley"
+                },
+                "aquarium": {
+                    "name": "aquarium",
+                    "type": "aquarium"
+                },
+                "casino": {
+                    "name": "Casino",
+                    "type": "casino"
+                },
+                "gym": {
+                    "name": "Gym",
+                    "type": "gym"
+                },
+                "movieTheater": {
+                    "name": "Movie Theater",
+                    "type": "movie_theater"
+                },
+                "museum": {
+                    "name": "Museum",
+                    "type": "museum"
+                },
+                "park": {
+                    "name": "Park",
+                    "type": "park"
+                },
+                "spa": {
+                    "name": "Spa",
+                    "type": "spa"
+                }
+            }
+        }
+    ]
+}

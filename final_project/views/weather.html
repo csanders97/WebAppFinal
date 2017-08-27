@@ -1,0 +1,22 @@
+<div class="header item">
+    <h1>{{ message }}</h1>
+</div>
+<div class="container">
+    <select ng-model="selectedDay" ng-options="x for x in days"></select>
+    <form ng-submit="getData()">
+        Please enter your city:
+        <input type="text" ng-model="city" name="city" />
+        <input type="submit" id="submit" value="Submit" />
+    </form>
+    <div class="weather">
+        <div> Searching weather for: {{ city }}... </div>
+        <div>{{ selectedDay }}
+        <div>{{ min }}</div>
+        <div>{{ max }}</div>
+        <img id="condition" src="{{ image }}"></img>
+        <div>{{ cond }}</div>
+    </div>
+    <div class="goActivity">
+        <a href="#!activity">Go Get Activities</a>
+    </div>
+</div>
