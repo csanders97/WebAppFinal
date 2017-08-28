@@ -107,11 +107,19 @@ app.controller('activityController', function($scope, $http) {
     $scope.message = "Activity";
     $http.get('activities.json')
     .then(function(response) {
-        var activityData = response.data;
-        //console.log(activityData);
+        var activityData = response.data.activity[0];
+        $scope.allData = activityData.all;
+        $scope.sunData = activityData.sun;
     });
+    $scope.selectedActivity = function(activity) {
+        console.log(activity.name);
+    };
 });
 
-app.controller('locationController', function($scope) {
+app.controller('locationController', function($scope, $http) {
     $scope.message = "Location";
+    $http.get('https://maps.googleapis.com/maps/api/places/nearbysearch/json?radius=500&type=food&key=AIzaSyAngLB6WyJIJndCznurj-Jd6Zmy9c-T5NE')
+    .then(function(response) {
+
+    });
 });

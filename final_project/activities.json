@@ -43,11 +43,9 @@
                     "type": "park"
                 },
                 "golf": {
-                    "name": "Golf"
+                    "name": "Golf",
+                    "type": "golf_course"
                 },
-                // "biking": [
-
-                // ],
                 "amusementPark": {
                     "name": "Amusement Park",
                     "type": "amusement_park"
@@ -59,11 +57,11 @@
             },
             "all": {
                 "bowling": {
-                    "name": "bowling",
+                    "name": "Bowling",
                     "type": "bowling_alley"
                 },
                 "aquarium": {
-                    "name": "aquarium",
+                    "name": "Aquarium",
                     "type": "aquarium"
                 },
                 "casino": {

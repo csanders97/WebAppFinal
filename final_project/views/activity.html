@@ -1,3 +1,16 @@
 <div class="header item">
     <h1>{{ message }}</h1>
 </div>
+<div class="container">
+    <div class="activity">
+        <div ng-repeat="all in allData" ng-click="selectedActivity(all)">
+            <div class="activities">{{ all.name }}</div>
+        </div>
+        <div ng-repeat="sun in sunData" ng-click="selectedActivity(sun)">
+            <div class="activities">{{ sun.name }}</div>
+        </div>
+    </div>
+    <div class="goLocation">
+        <a href="#!location">Go Get Locations</a>
+    </div>
+</div>
