@@ -6,7 +6,14 @@
         <div>{{ activeName }}</div>
         <div>{{ activeType }}</div>
     </div>
+    <div id="map"></div>
+    <div id="right-panel">
+      <h2>Results</h2>
+      <ul id="places"></ul>
+      <button id="more">More results</button>
+    </div>
     <div class="back">
         <a href="#!activity">Back to Activities</a>
     </div>
 </div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK9jOdWM_5-_tL32zFoCYqO9xQHZbxdwg&libraries=places&callback=initMap"></script>
