@@ -21,6 +21,30 @@ app.config(function($routeProvider) {
         });
 });
 
+app.service('weatherCondition', function() {
+    var condition;
+    return {
+        getCondition: function() {
+            return condition;
+        },
+        setCondition: function(value) {
+            condition = value;
+        }
+    };
+});
+
+app.service('choosenActivity', function() {
+    var activity;
+    return {
+        getActivity: function() {
+            return activity;
+        },
+        setActivity: function(value) {
+            activity = value;
+        }
+    };
+});
+
 app.controller('mainController', function($scope) {
     // $scope.nav = {
     //     navbar: [
@@ -32,11 +56,7 @@ app.controller('mainController', function($scope) {
     $scope.message = "Welcome to *Insert name here*";
 });
 
-// app.service('weatherService', function() {
-
-// });
-
-app.controller('weatherController', function($scope, $http) {
+app.controller('weatherController', function($scope, $http, weatherCondition) {
     $scope.message = "Weather";
     $scope.days = ["Today", "Tomorrow", "Third Day", "Fourth Day", "Fifth Day"];
     var months = ["January", "February", "March", "April", "May", "June",
@@ -100,26 +120,44 @@ app.controller('weatherController', function($scope, $http) {
             }
         });
         document.getElementsByClassName('goActivity')[0].style.visibility = 'visible';
+        $scope.getCondition = function(condition) {
+            console.log(condition);
+            weatherCondition.setCondition(condition);
+            window.location.href = "#!activity";
+        };
     }
 });
 
-app.controller('activityController', function($scope, $http) {
+app.controller('activityController', function($scope, $http, weatherCondition, choosenActivity) {
     $scope.message = "Activity";
+    var weather = weatherCondition.getCondition();
+    console.log(weather);
     $http.get('activities.json')
     .then(function(response) {
         var activityData = response.data.activity[0];
         $scope.allData = activityData.all;
-        $scope.sunData = activityData.sun;
+        if (weather.toLowerCase().includes("rain")) {
+            $scope.weatherData = activityData.rain;
+        }
+        else if (weather.toLowerCase().includes("cloud")) {
+            $scope.weatherData = activityData.cloud;
+        }
+        else if (weather.toLowerCase().includes("clear")) {
+            $scope.weatherData = activityData.sun;
+        }
+        else if (weather.toLowerCase().includes("snow")) {
+            $scope.weatherData = activityData.snow;
+        }
     });
     $scope.selectedActivity = function(activity) {
-        console.log(activity.name);
+        choosenActivity.setActivity(activity);
+        window.location.href = "#!location";
     };
 });
 
-app.controller('locationController', function($scope, $http) {
+app.controller('locationController', function($scope, $http, choosenActivity) {
     $scope.message = "Location";
-    $http.get('https://maps.googleapis.com/maps/api/places/nearbysearch/json?radius=500&type=food&key=AIzaSyAngLB6WyJIJndCznurj-Jd6Zmy9c-T5NE')
-    .then(function(response) {
-
-    });
+    var active = choosenActivity.getActivity();
+    $scope.activeName = active.name;
+    $scope.activeType = active.type;
 });
