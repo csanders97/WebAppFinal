@@ -3,23 +3,54 @@
         {
             "snow": {
                 "basketball": {
-                    "name": "Basketball",
-                    "type": "gym"
-                },
-                "snowboarding": {
-
-                },
-                "skiing": {
-
-                },
-                "sledding": {
-
+                    "name": "Basketball (Indoor)",
+                    "type": "gym",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 }
             },
             "rain": {
                 "basketball": {
-                    "name": "Basketball",
-                    "type": "gym"
+                    "name": "Basketball (Indoor)",
+                    "type": "gym",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 }
             },
             "cloud": {
@@ -27,66 +58,342 @@
             },
             "sun": {
                 "basketball": {
-                    "name": "Basketball",
-                    "type": "park"
+                    "name": "Basketball (Outdoor)",
+                    "type": "park",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "baseball": {
                     "name": "Baseball",
-                    "type": "park"
+                    "type": "park",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "football": {
                     "name": "Football",
-                    "type": "park"
+                    "type": "park",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "frisbee": {
                     "name": "Frisbee",
-                    "type": "park"
+                    "type": "park",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "golf": {
                     "name": "Golf",
-                    "type": "golf_course"
+                    "type": "golf_course",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "amusementPark": {
                     "name": "Amusement Park",
-                    "type": "amusement_park"
-                },
-                "camping": {
-                    "name": "Camping",
-                    "type": "campground"
+                    "type": "amusement_park",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 }
             },
             "all": {
                 "bowling": {
                     "name": "Bowling",
-                    "type": "bowling_alley"
+                    "type": "bowling_alley",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "aquarium": {
                     "name": "Aquarium",
-                    "type": "aquarium"
+                    "type": "aquarium",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "casino": {
                     "name": "Casino",
-                    "type": "casino"
+                    "type": "casino",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "gym": {
                     "name": "Gym",
-                    "type": "gym"
+                    "type": "gym",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "movieTheater": {
                     "name": "Movie Theater",
-                    "type": "movie_theater"
+                    "type": "movie_theater",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "museum": {
                     "name": "Museum",
-                    "type": "museum"
+                    "type": "museum",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "park": {
                     "name": "Park",
-                    "type": "park"
+                    "type": "park",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 },
                 "spa": {
                     "name": "Spa",
-                    "type": "spa"
+                    "type": "spa",
+                    "miniGames": [{
+                        "gameOne": {
+                            "name": "Knockout",
+                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                            "ruleTwo": "If second player makes it before first player, first player is out",
+                            "ruleThree": "Continue on until one player is left standing."
+                        },
+                        "gameTwo": {
+                            "name": "In and Out",
+                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                            "ruleTwo": "The first three pass the ball around and try to score.",
+                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                        },
+                        "gameThree": {
+                            "name": "Horse",
+                            "ruleOne": "Can have any number of players in one game.",
+                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                            "ruleThree": "Last player left without spelling out horse is the winner."
+                        }
+                    }]
                 }
             }
         }

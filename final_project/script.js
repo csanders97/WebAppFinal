@@ -15,6 +15,12 @@ app.config(function($routeProvider) {
             templateUrl: 'views/activity.html',
             controller: 'activityController'
         })
+
+        .when('/games', {
+            templateUrl: 'views/games.html',
+            controller: 'gamesController'
+        })
+
         .when('/location', {
             templateUrl: 'views/location.html',
             controller: 'locationController'
@@ -53,11 +59,11 @@ app.controller('mainController', function($scope) {
     //         {link: '/location', name: 'Location'}
     //     ]
     // }   
-    $scope.message = "Welcome to *Insert name here*";
+    $scope.title = "Welcome to *Insert name here*";
 });
 
 app.controller('weatherController', function($scope, $http, weatherCondition) {
-    $scope.message = "Weather";
+    $scope.title = "Weather";
     $scope.days = ["Today", "Tomorrow", "Third Day", "Fourth Day", "Fifth Day"];
     var months = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"];
@@ -103,20 +109,25 @@ app.controller('weatherController', function($scope, $http, weatherCondition) {
         $http.get(FULL_PATH)
         .then(function(response) {
             var weatherData = response.data
+            $scope.description;
             $scope.min = weatherData.list[dayIndex].temp.min;
             $scope.max = weatherData.list[dayIndex].temp.max;
             $scope.cond = weatherData.list[dayIndex].weather[0].main;
             if (response.data.list[dayIndex].weather[0].main.toLowerCase().includes("clear")) {
                 $scope.image = "images/sunny.png";
+                $scope.description = "Clear clear like a mirror!";
             }
             else if (response.data.list[dayIndex].weather[0].main.toLowerCase().includes("rain")) {
                 $scope.image = "images/rainy.png";
+                $scope.description = "Rain rain go away!";
             }
             else if (response.data.list[dayIndex].weather[0].main.toLowerCase().includes("cloud")) {
                 $scope.image = "images/cloudy.png";
+                $scope.description = "Cloud cloud makes me pout!";
             }
             else if (response.data.list[dayIndex].weather[0].main.toLowerCase().includes("snow")) {
                 $scope.image = "images/snowy.png";
+                $scope.description = "Snow snow say oh!";
             }
         });
         document.getElementsByClassName('goActivity')[0].style.visibility = 'visible';
@@ -129,7 +140,7 @@ app.controller('weatherController', function($scope, $http, weatherCondition) {
 });
 
 app.controller('activityController', function($scope, $http, weatherCondition, choosenActivity) {
-    $scope.message = "Activity";
+    $scope.title = "Activity";
     var weather = weatherCondition.getCondition();
     console.log(weather);
     $http.get('activities.json')
@@ -155,8 +166,12 @@ app.controller('activityController', function($scope, $http, weatherCondition, c
     };
 });
 
+app.controller('gamesController', function($scope, $http) {
+    $scope.title = "Games";
+});
+
 app.controller('locationController', function($scope, choosenActivity) {
-    $scope.message = "Location";
+    $scope.title = "Location";
     var active = choosenActivity.getActivity();
     // $scope.activeName = active.name;
     // $scope.activeType = active.type;

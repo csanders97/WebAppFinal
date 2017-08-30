@@ -1,5 +1,5 @@
 <div class="header item">
-    <h1>{{ message }}</h1>
+    <h1>{{ title }}</h1>
 </div>
 <div class="container">
     <select ng-model="selectedDay" ng-options="x for x in days"></select>
@@ -15,6 +15,7 @@
         <div>{{ max }}</div>
         <img id="condition" src="{{ image }}"></img>
         <div>{{ cond }}</div>
+        <div>{{ description }}</div>
         <div class="goActivity">
             <button class="getActivities" ng-click="getCondition(cond)">Go Get Activities</button>
         </div>
