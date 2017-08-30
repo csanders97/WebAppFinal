@@ -132,7 +132,6 @@ app.controller('weatherController', function($scope, $http, weatherCondition) {
         });
         document.getElementsByClassName('goActivity')[0].style.visibility = 'visible';
         $scope.getCondition = function(condition) {
-            console.log(condition);
             weatherCondition.setCondition(condition);
             window.location.href = "#!activity";
         };
@@ -142,7 +141,6 @@ app.controller('weatherController', function($scope, $http, weatherCondition) {
 app.controller('activityController', function($scope, $http, weatherCondition, choosenActivity) {
     $scope.title = "Activity";
     var weather = weatherCondition.getCondition();
-    console.log(weather);
     $http.get('activities.json')
     .then(function(response) {
         var activityData = response.data.activity[0];
@@ -162,19 +160,19 @@ app.controller('activityController', function($scope, $http, weatherCondition, c
     });
     $scope.selectedActivity = function(activity) {
         choosenActivity.setActivity(activity);
-        window.location.href = "#!location";
+        window.location.href = "#!games";
     };
 });
 
-app.controller('gamesController', function($scope, $http) {
+app.controller('gamesController', function($scope, $http, choosenActivity) {
     $scope.title = "Games";
+    var activity = choosenActivity.getActivity();
+    $scope.activityName = activity.name;
+    $scope.activityGame = activity.miniGames[0];
 });
 
-app.controller('locationController', function($scope, choosenActivity) {
+app.controller('locationController', function($scope) {
     $scope.title = "Location";
-    var active = choosenActivity.getActivity();
-    // $scope.activeName = active.name;
-    // $scope.activeType = active.type;
     
     var map;
 
@@ -233,7 +231,7 @@ app.controller('locationController', function($scope, choosenActivity) {
                 position: place.geometry.location
             });
 
-            placesList.innerHTML += '<li>' + place.name + '</li>';
+            placesList.innerHTML += '<li id="placeName">' + place.name + '</li>';
 
             bounds.extend(place.geometry.location);
         }
