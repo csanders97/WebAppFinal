@@ -31,17 +31,9 @@ app.config(function($routeProvider) {
 
 app.service('weatherCondition', function() {
     var condition;
-    var lat;
-    var long;
     return {
         getCondition: function() {
             return condition;
-        },
-        getLatitude: function() {
-            return lat;
-        },
-        getLongitude: function() {
-            return long;
         },
         setCondition: function(value) {
             condition = value;
@@ -53,6 +45,32 @@ app.service('weatherCondition', function() {
             long = value;
         }
     };
+});
+
+app.service('gettingLocation', function() {
+    var lat;
+    var long;
+    var type;
+    return {
+        getLatitude: function() {
+            return lat;
+        },
+        getLongitude: function() {
+            return long;
+        },
+        getActivityType: function() {
+            return type;
+        },
+        setLatitude: function(value) {
+            lat = value;
+        },
+        setLongitude: function(value) {
+            long = value;
+        },
+        setActivityType: function(value) {
+            type = value;
+        }
+    }
 });
 
 app.service('choosenActivity', function() {
@@ -71,7 +89,7 @@ app.controller('mainController', function($scope) {
     $scope.title = "Welcome to *Insert name here*";
 });
 
-app.controller('weatherController', function($scope, $http, weatherCondition) {
+app.controller('weatherController', function($scope, $http, weatherCondition, gettingLocation) {
     var lat;
     var long;
     $scope.title = "Weather";
@@ -113,6 +131,7 @@ app.controller('weatherController', function($scope, $http, weatherCondition) {
             var currDay = date.getDate();
             $scope.selectedDay = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
         }
+        
         const API_KEY = "d9fdddf4ac40863d10700c8f1791325c";
         const URL_FIRST = "http://api.openweathermap.org/data/2.5/forecast/daily?q=";
         const URL_SECOND = ",us&units=imperial&cnt=5&appid=";
@@ -146,8 +165,8 @@ app.controller('weatherController', function($scope, $http, weatherCondition) {
         document.getElementsByClassName('goActivity')[0].style.visibility = 'visible';
         $scope.getCondition = function(condition) {
             weatherCondition.setCondition(condition);
-            weatherCondition.setLatitude(lat);
-            weatherCondition.setLongitude(long);
+            gettingLocation.setLatitude(lat);
+            gettingLocation.setLongitude(long);
             window.location.href = "#!activity";
         };
     }
@@ -179,18 +198,19 @@ app.controller('activityController', function($scope, $http, weatherCondition, c
     };
 });
 
-app.controller('gamesController', function($scope, $http, choosenActivity) {
+app.controller('gamesController', function($scope, $http, choosenActivity, gettingLocation) {
     $scope.title = "Games";
     var activity = choosenActivity.getActivity();
     $scope.activityName = activity.name;
-    activityType = activity.type;
+    gettingLocation.setActivityType(activity.type);
     $scope.activityGame = activity.miniGames;
 });
 
-app.controller('locationController', function($scope, weatherCondition) {
+app.controller('locationController', function($scope, weatherCondition, gettingLocation) {
     $scope.title = "Location";
-    var lat = weatherCondition.getLatitude();
-    var long = weatherCondition.getLongitude();
+    var lat = gettingLocation.getLatitude();
+    var long = gettingLocation.getLongitude();
+    var type = gettingLocation.getActivityType();
     var pyrmont = {lat: lat, lng: long};
     
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -202,7 +222,7 @@ app.controller('locationController', function($scope, weatherCondition) {
     service.nearbySearch({
         location: pyrmont,
         radius: 500,
-        type: [activityType]
+        type: [type]
     }, processResults);
     
     
