@@ -1,3 +1,4 @@
+var activityType;
 var app = angular.module('activityHunt', ['ngRoute']);
 app.config(function($routeProvider) {
     $routeProvider
@@ -51,14 +52,7 @@ app.service('choosenActivity', function() {
     };
 });
 
-app.controller('mainController', function($scope) {
-    // $scope.nav = {
-    //     navbar: [
-    //         {link: '/weather', name: 'Weather'},
-    //         {link: '/activity', name: 'Activity'},
-    //         {link: '/location', name: 'Location'}
-    //     ]
-    // }   
+app.controller('mainController', function($scope) { 
     $scope.title = "Welcome to *Insert name here*";
 });
 
@@ -108,7 +102,7 @@ app.controller('weatherController', function($scope, $http, weatherCondition) {
         const FULL_PATH = URL_FIRST + "" + $scope.city + "" + URL_SECOND + "" + API_KEY;
         $http.get(FULL_PATH)
         .then(function(response) {
-            var weatherData = response.data
+            var weatherData = response.data;
             $scope.description;
             $scope.min = weatherData.list[dayIndex].temp.min;
             $scope.max = weatherData.list[dayIndex].temp.max;
@@ -133,6 +127,7 @@ app.controller('weatherController', function($scope, $http, weatherCondition) {
         document.getElementsByClassName('goActivity')[0].style.visibility = 'visible';
         $scope.getCondition = function(condition) {
             weatherCondition.setCondition(condition);
+
             window.location.href = "#!activity";
         };
     }
@@ -168,73 +163,74 @@ app.controller('gamesController', function($scope, $http, choosenActivity) {
     $scope.title = "Games";
     var activity = choosenActivity.getActivity();
     $scope.activityName = activity.name;
-    $scope.activityGame = activity.miniGames[0];
+    activityType = activity.type;
+    $scope.activityGame = activity.miniGames;
 });
 
 app.controller('locationController', function($scope) {
     $scope.title = "Location";
-    
-    var map;
+    initMap();
+});
 
-    function initMap() {
-        var pyrmont = {lat: -33.866, lng: 151.196};
+function initMap() {
+    var currLocation = {lat: 40.690238, lng: -111.91442060000001};
 
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: pyrmont,
-            zoom: 17
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: currLocation,
+        zoom: 17
+    });
+
+    var service = new google.maps.places.PlacesService(map);
+
+    service.nearbySearch({
+        location: currLocation,
+        radius: 500,
+        type: [activityType]
+    }, processResults);
+}
+
+function processResults(results, status, pagination) {
+    if (status !== google.maps.places.PlacesServiceStatus.OK) {
+        return;
+    } else {
+        createMarkers(results);
+
+        if (pagination.hasNextPage) {
+            var moreButton = document.getElementById('more');
+
+            moreButton.disabled = false;
+
+            moreButton.addEventListener('click', function() {
+                moreButton.disabled = true;
+                pagination.nextPage();
+            });
+        }
+    }
+}
+
+function createMarkers(places) {
+    var bounds = new google.maps.LatLngBounds();
+    var placesList = document.getElementById('places');
+
+    for (var i = 0, place; place = places[i]; i++) {
+        var image = {
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25)
+        };
+
+        var marker = new google.maps.Marker({
+            map: map,
+            icon: image,
+            title: place.name,
+            position: place.geometry.location
         });
 
-        var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch({
-            location: pyrmont,
-            radius: 500,
-            type: ['store']
-        }, processResults);
+        placesList.innerHTML += '<li id="placeName">' + place.name + '</li>';
+
+        bounds.extend(place.geometry.location);
     }
-
-    function processResults(results, status, pagination) {
-        if (status !== google.maps.places.PlacesServiceStatus.OK) {
-            return;
-        } else {
-            createMarkers(results);
-
-            if (pagination.hasNextPage) {
-                var moreButton = document.getElementById('more');
-
-                moreButton.disabled = false;
-
-                moreButton.addEventListener('click', function() {
-                    moreButton.disabled = true;
-                    pagination.nextPage();
-                });
-            }
-        }
-    }
-
-    function createMarkers(places) {
-        var bounds = new google.maps.LatLngBounds();
-        var placesList = document.getElementById('places');
-
-        for (var i = 0, place; place = places[i]; i++) {
-            var image = {
-                url: place.icon,
-                size: new google.maps.Size(71, 71),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(17, 34),
-                scaledSize: new google.maps.Size(25, 25)
-            };
-
-            var marker = new google.maps.Marker({
-                map: map,
-                icon: image,
-                title: place.name,
-                position: place.geometry.location
-            });
-
-            placesList.innerHTML += '<li id="placeName">' + place.name + '</li>';
-
-            bounds.extend(place.geometry.location);
-        }
-        map.fitBounds(bounds);
-    }
-});
+    map.fitBounds(bounds);
+}

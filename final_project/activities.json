@@ -231,21 +231,21 @@
                     "miniGames": {
                         "gameOne": {
                             "name": "Chip On",
-                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
-                            "ruleTwo": "If second player makes it before first player, first player is out",
-                            "ruleThree": "Continue on until one player is left standing."
+                            "ruleOne": "Multiple players are allowed for this game",
+                            "ruleTwo": "Players take turns trying to chip onto the green as close to the hole as possible.",
+                            "ruleThree": "Closest ball or first to make it in wins."
                         },
                         "gameTwo": {
                             "name": "Long Drive",
-                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
-                            "ruleTwo": "The first three pass the ball around and try to score.",
-                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                            "ruleOne": "Multiple players allowed for this game.",
+                            "ruleTwo": "Players take turns driving the ball as far as possible.",
+                            "ruleThree": "Furthest ball wins the game."
                         },
                         "gameThree": {
                             "name": "Put Put",
-                            "ruleOne": "Can have any number of players in one game.",
-                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
-                            "ruleThree": "Last player left without spelling out horse is the winner."
+                            "ruleOne": "Multiple players allowed for this game.",
+                            "ruleTwo": "Players take turns putting on the green trying to get as close to the hole as possible.",
+                            "ruleThree": "Closest ball or first to make it in wins."
                         }
                     }
                 },
@@ -281,21 +281,21 @@
                     "miniGames": {
                         "gameOne": {
                             "name": "Split",
-                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
-                            "ruleTwo": "If second player makes it before first player, first player is out",
-                            "ruleThree": "Continue on until one player is left standing."
+                            "ruleOne": "Up to four players in one lane at a time.",
+                            "ruleTwo": "When a split is encountered, players take turns trying to knock it down.",
+                            "ruleThree": "Winner is whoever can knock down both pins in one bowl."
                         },
                         "gameTwo": {
                             "name": "Gobble Gobble",
-                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
-                            "ruleTwo": "The first three pass the ball around and try to score.",
-                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                            "ruleOne": "Up to four players in one lane at a time.",
+                            "ruleTwo": "Players try to get as much turkeys as they can in a single game.",
+                            "ruleThree": "Winner goes to whoever gets the most turkeys."
                         },
                         "gameThree": {
                             "name": "Got a Spare?",
-                            "ruleOne": "Can have any number of players in one game.",
-                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
-                            "ruleThree": "Last player left without spelling out horse is the winner."
+                            "ruleOne": "Up to four players in one lane at a time.",
+                            "ruleTwo": "Players stray from the actual game and try to hit as many spares as possible.",
+                            "ruleThree": "Player with most spares wins."
                         }
                     }
                 },
@@ -305,21 +305,21 @@
                     "miniGames": {
                         "gameOne": {
                             "name": "Stingray Count",
-                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
-                            "ruleTwo": "If second player makes it before first player, first player is out",
-                            "ruleThree": "Continue on until one player is left standing."
+                            "ruleOne": "As many players desired are welcome to play.",
+                            "ruleTwo": "Players try to count up how many stingrays there are in the aquarium.",
+                            "ruleThree": "Player with most stingrays found wins."
                         },
                         "gameTwo": {
                             "name": "Finding Nemo",
-                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
-                            "ruleTwo": "The first three pass the ball around and try to score.",
-                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                            "ruleOne": "As many players desired are welcome to play.",
+                            "ruleTwo": "Players try to find as many clown fish as there are in the aquarium.",
+                            "ruleThree": "Player with the most Nemos at the end wins."
                         },
                         "gameThree": {
                             "name": "Dare",
-                            "ruleOne": "Can have any number of players in one game.",
-                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
-                            "ruleThree": "Last player left without spelling out horse is the winner."
+                            "ruleOne": "As many players desired are welcome to play.",
+                            "ruleTwo": "Players dare each other to touch free creatures through the trip.",
+                            "ruleThree": "Losers are those who refuse to touch. Winner is last man standing."
                         }
                     }
                 },
@@ -329,21 +329,21 @@
                     "miniGames": {
                         "gameOne": {
                             "name": "Blackjack",
-                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
-                            "ruleTwo": "If second player makes it before first player, first player is out",
-                            "ruleThree": "Continue on until one player is left standing."
+                            "ruleOne": "Two to four people playing with dealer",
+                            "ruleTwo": "Players are given two cards and are trying to reach twenty-one without going over.",
+                            "ruleThree": "Winner is player that is closest to twenty-one without going over."
                         },
                         "gameTwo": {
                             "name": "Poker",
-                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
-                            "ruleTwo": "The first three pass the ball around and try to score.",
-                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                            "ruleOne": "Up to five to six players at max during each game.",
+                            "ruleTwo": "Each player is given seven cards and try to get the best hand and coerce others to either drop or raise stakes.",
+                            "ruleThree": "Player with the best hand wins the game and the money."
                         },
                         "gameThree": {
-                            "name": "Horse",
-                            "ruleOne": "Can have any number of players in one game.",
-                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
-                            "ruleThree": "Last player left without spelling out horse is the winner."
+                            "name": "Texas Hold'Em",
+                            "ruleOne": "Six players are allowed for each game.",
+                            "ruleTwo": "Players get two cards faced down and try to get others to buckle.",
+                            "ruleThree": "Last player to remain without folding wins."
                         }
                     }
                 },
