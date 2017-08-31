@@ -254,22 +254,22 @@
                     "type": "amusement_park",
                     "miniGames": {
                         "gameOne": {
-                            "name": "Knockout",
-                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
-                            "ruleTwo": "If second player makes it before first player, first player is out",
-                            "ruleThree": "Continue on until one player is left standing."
+                            "name": "Guess My Age",
+                            "ruleOne": "This is aimed more for two players at a time.",
+                            "ruleTwo": "While waiting in line, workers try to guess your age.",
+                            "ruleThree": "They win if they get in a 5 year range of your actual age."
                         },
                         "gameTwo": {
-                            "name": "In and Out",
-                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
-                            "ruleTwo": "The first three pass the ball around and try to score.",
-                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                            "name": "Guess My Height",
+                            "ruleOne": "This is a two player game.",
+                            "ruleTwo": "The bouncer tries to guess your height to determine if you're tall enough to get on the ride.",
+                            "ruleThree": "You only win if they decide that you're fine to get on the ride."
                         },
                         "gameThree": {
-                            "name": "Horse",
-                            "ruleOne": "Can have any number of players in one game.",
-                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
-                            "ruleThree": "Last player left without spelling out horse is the winner."
+                            "name": "Keep It Down",
+                            "ruleOne": "Can have any number of players at a time.",
+                            "ruleTwo": "Players ride as many roller coasters as possible on a full stomach.",
+                            "ruleThree": "Winner is the player that can manage to keep their food down."
                         }
                     }
                 }

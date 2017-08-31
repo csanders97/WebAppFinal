@@ -13,6 +13,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 #right-panel {
   font-family: 'Ubuntu';
   line-height: 30px;
@@ -30,6 +31,7 @@ html, body {
 #right-panel i {
   font-size: 12px;
 }
+
 #right-panel {
   font-family: 'Ubuntu';
   position: absolute;
@@ -43,10 +45,12 @@ html, body {
   border: 1px solid #999;
   background: #fff;
 }
+
 h2 {
   font-size: 22px;
   margin: 0 0 5px 0;
 }
+
 #places {
   list-style-type: none;
   padding: 0;
@@ -55,6 +59,7 @@ h2 {
   width: 200px;
   overflow-y: scroll;
 }
+
 #placeName {
   background-color: #f1f1f1;
   padding: 10px;
@@ -62,9 +67,11 @@ h2 {
   white-space: nowrap;
   overflow: hidden;
 }
+
 #placeName:nth-child(odd) {
   background-color: #fcfcfc;
 }
+
 #more {
   width: 100%;
   margin: 5px 0 0 0;
