@@ -1,3 +1,4 @@
+var map;
 var activityType;
 var app = angular.module('activityHunt', ['ngRoute']);
 app.config(function($routeProvider) {
@@ -30,12 +31,26 @@ app.config(function($routeProvider) {
 
 app.service('weatherCondition', function() {
     var condition;
+    var lat;
+    var long;
     return {
         getCondition: function() {
             return condition;
         },
+        getLatitude: function() {
+            return lat;
+        },
+        getLongitude: function() {
+            return long;
+        },
         setCondition: function(value) {
             condition = value;
+        },
+        setLatitude: function(value) {
+            lat = value;
+        },
+        setLongitude: function(value) {
+            long = value;
         }
     };
 });
@@ -57,6 +72,8 @@ app.controller('mainController', function($scope) {
 });
 
 app.controller('weatherController', function($scope, $http, weatherCondition) {
+    var lat;
+    var long;
     $scope.title = "Weather";
     $scope.days = ["Today", "Tomorrow", "Third Day", "Fourth Day", "Fifth Day"];
     var months = ["January", "February", "March", "April", "May", "June",
@@ -107,6 +124,8 @@ app.controller('weatherController', function($scope, $http, weatherCondition) {
             $scope.min = weatherData.list[dayIndex].temp.min;
             $scope.max = weatherData.list[dayIndex].temp.max;
             $scope.cond = weatherData.list[dayIndex].weather[0].main;
+            lat = weatherData.city.coord.lat;
+            long = weatherData.city.coord.lon;
             if (response.data.list[dayIndex].weather[0].main.toLowerCase().includes("clear")) {
                 $scope.image = "images/sunny.png";
                 $scope.description = "Clear clear like a mirror!";
@@ -127,7 +146,8 @@ app.controller('weatherController', function($scope, $http, weatherCondition) {
         document.getElementsByClassName('goActivity')[0].style.visibility = 'visible';
         $scope.getCondition = function(condition) {
             weatherCondition.setCondition(condition);
-
+            weatherCondition.setLatitude(lat);
+            weatherCondition.setLongitude(long);
             window.location.href = "#!activity";
         };
     }
@@ -167,70 +187,68 @@ app.controller('gamesController', function($scope, $http, choosenActivity) {
     $scope.activityGame = activity.miniGames;
 });
 
-app.controller('locationController', function($scope) {
+app.controller('locationController', function($scope, weatherCondition) {
     $scope.title = "Location";
-    initMap();
-});
-
-function initMap() {
-    var currLocation = {lat: 40.690238, lng: -111.91442060000001};
-
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: currLocation,
+    var lat = weatherCondition.getLatitude();
+    var long = weatherCondition.getLongitude();
+    var pyrmont = {lat: lat, lng: long};
+    
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: pyrmont,
         zoom: 17
     });
-
+    
     var service = new google.maps.places.PlacesService(map);
-
     service.nearbySearch({
-        location: currLocation,
+        location: pyrmont,
         radius: 500,
         type: [activityType]
     }, processResults);
-}
-
-function processResults(results, status, pagination) {
-    if (status !== google.maps.places.PlacesServiceStatus.OK) {
+    
+    
+    function processResults(results, status, pagination) {
+      if (status !== google.maps.places.PlacesServiceStatus.OK) {
         return;
-    } else {
+      } else {
         createMarkers(results);
-
+    
         if (pagination.hasNextPage) {
-            var moreButton = document.getElementById('more');
-
-            moreButton.disabled = false;
-
-            moreButton.addEventListener('click', function() {
-                moreButton.disabled = true;
-                pagination.nextPage();
-            });
+          var moreButton = document.getElementById('more');
+    
+          moreButton.disabled = false;
+    
+          moreButton.addEventListener('click', function() {
+            moreButton.disabled = true;
+            pagination.nextPage();
+          });
         }
+      }
     }
-}
-
-function createMarkers(places) {
-    var bounds = new google.maps.LatLngBounds();
-    var placesList = document.getElementById('places');
-
-    for (var i = 0, place; place = places[i]; i++) {
+    
+    function createMarkers(places) {
+      var bounds = new google.maps.LatLngBounds();
+      var placesList = document.getElementById('places');
+    
+      for (var i = 0, place; place = places[i]; i++) {
         var image = {
-            url: place.icon,
-            size: new google.maps.Size(71, 71),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(17, 34),
-            scaledSize: new google.maps.Size(25, 25)
+          url: place.icon,
+          size: new google.maps.Size(71, 71),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(17, 34),
+          scaledSize: new google.maps.Size(25, 25)
         };
-
+    
         var marker = new google.maps.Marker({
-            map: map,
-            icon: image,
-            title: place.name,
-            position: place.geometry.location
+          map: map,
+          icon: image,
+          title: place.name,
+          position: place.geometry.location
         });
-
+    
         placesList.innerHTML += '<li id="placeName">' + place.name + '</li>';
-
+    
         bounds.extend(place.geometry.location);
+      }
+      map.fitBounds(bounds);
     }
-    map.fitBounds(bounds);
-}
+});
