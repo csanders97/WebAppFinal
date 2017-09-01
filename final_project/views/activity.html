@@ -2,12 +2,22 @@
     <h1>{{ title }}</h1>
 </div>
 <div class="container">
-    <div class="activity">
-        <div ng-repeat="all in allData" ng-click="selectedActivity(all)">
-            <div class="activities">{{ all.name }}</div>
+    <h1>Based on the weather we've predicted, the following activities are best suited for those conditions.</h1>
+    <div class="activityList">
+        <h2>Click on any of the activities listed below to learn more!</h2>
+        <div class="gameActivities">
+            <div ng-repeat="all in allData" ng-click="selectedActivity(all)">
+                <div class="allActivities">{{ all.name }}</div>
+            </div>
+            <div ng-repeat="weather in weatherData" ng-click="selectedActivity(weather)">
+                <div class="optionalActivities">{{ weather.name }}</div>
+            </div>
         </div>
-        <div ng-repeat="weather in weatherData" ng-click="selectedActivity(weather)">
-            <div class="activities">{{ weather.name }}</div>
+        <div class="backToWeather">
+            <h3>Planing to go somewhere else? Click here to check the weather for your new destination</h3>
+            <div class="goBackWeather">
+                <a href="#!weather">Back To Weather</a>
+            </div>
         </div>
     </div>
 </div>

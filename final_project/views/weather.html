@@ -2,22 +2,31 @@
     <h1>{{ title }}</h1>
 </div>
 <div class="container">
-    <select ng-model="selectedDay" ng-options="x for x in days"></select>
-    <form ng-submit="getData()">
-        Please enter your city:
-        <input type="text" ng-model="city" name="city" />
-        <input type="submit" id="submit" value="Submit" />
-    </form>
+    <div class="info">
+        <h1>Let's get the weather for your city</h1>
+        <div class="chooseDay">
+            <p class="findWeather">Choose a day:</p>
+            <select ng-model="selectedDay" ng-options="x for x in days"></select>
+        </div>
+        <form ng-submit="getData()">
+            <p class="findWeather">Please enter your city:</p>
+            <input type="text" ng-model="city" name="city" />
+            <input type="submit" id="submit" value="Submit" />
+        </form>
+        <p class="findWeather"> Searching weather for: {{ city }}... </p>
+    </div>
     <div class="weather">
-        <div> Searching weather for: {{ city }}... </div>
-        <div>{{ selectedDay }}
+        <div>{{ day }}</div>
         <div>{{ min }}</div>
         <div>{{ max }}</div>
-        <img id="condition" src="{{ image }}"></img>
+        <img id="condition" src="{{ image }}" />
         <div>{{ cond }}</div>
         <div>{{ description }}</div>
-        <div class="goActivity">
-            <button class="getActivities" ng-click="getCondition(cond)">Go Get Activities</button>
+    </div>
+    <div class="goActivity">
+        <p>Follow the link below to get your activity list!</p>
+        <div class="getActivities" ng-click="getCondition(cond)">
+            <p>Go Get Activities</p>
         </div>
     </div>
 </div>

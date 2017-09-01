@@ -86,7 +86,7 @@ app.service('choosenActivity', function() {
 });
 
 app.controller('mainController', function($scope) { 
-    $scope.title = "Welcome to *Insert name here*";
+    $scope.title = "Welcome to Activity Hunt";
 });
 
 app.controller('weatherController', function($scope, $http, weatherCondition, gettingLocation) {
@@ -104,32 +104,32 @@ app.controller('weatherController', function($scope, $http, weatherCondition, ge
         if (day === "Today") {
             dayIndex = 0;
             var currDay = date.getDate();
-            $scope.selectedDay = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
+            $scope.day = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
         }
         else if (day === "Tomorrow") {
             dayIndex = 1;
             var currDay = date.getDate() + 1;
-            $scope.selectedDay = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
+            $scope.day = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
         }
         else if (day === "Third Day") {
             dayIndex = 2;
             var currDay = date.getDate() + 2;
-            $scope.selectedDay = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
+            $scope.day = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
         }
         else if (day === "Fourth Day") {
             dayIndex = 3;
             var currDay = date.getDate() + 3;
-            $scope.selectedDay = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
+            $scope.day = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
         }
         else if (day === "Fifth Day") {
             dayIndex = 4;
             var currDay = date.getDate() + 4;
-            $scope.selectedDay = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
+            $scope.day = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
         }
         else {
             dayIndex = 0;
             var currDay = date.getDate();
-            $scope.selectedDay = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
+            $scope.day = months[date.getMonth()] + " " + currDay + ", " + date.getFullYear();
         }
         
         const API_KEY = "d9fdddf4ac40863d10700c8f1791325c";
@@ -140,26 +140,26 @@ app.controller('weatherController', function($scope, $http, weatherCondition, ge
         .then(function(response) {
             var weatherData = response.data;
             $scope.description;
-            $scope.min = weatherData.list[dayIndex].temp.min;
-            $scope.max = weatherData.list[dayIndex].temp.max;
-            $scope.cond = weatherData.list[dayIndex].weather[0].main;
+            $scope.min = "Minimum Temperature is " + weatherData.list[dayIndex].temp.min;
+            $scope.max = "Maximum Temperature is " + weatherData.list[dayIndex].temp.max;
+            $scope.cond = weatherData.list[dayIndex].weather[0].main + " Weather";
             lat = weatherData.city.coord.lat;
             long = weatherData.city.coord.lon;
             if (response.data.list[dayIndex].weather[0].main.toLowerCase().includes("clear")) {
                 $scope.image = "images/sunny.png";
-                $scope.description = "Clear clear like a mirror!";
+                $scope.description = "Would you look at that! With weather like this, the possibilities are endless!";
             }
             else if (response.data.list[dayIndex].weather[0].main.toLowerCase().includes("rain")) {
                 $scope.image = "images/rainy.png";
-                $scope.description = "Rain rain go away!";
+                $scope.description = "Oh no! Looks like your options will be slightly hindered due to this weather.";
             }
             else if (response.data.list[dayIndex].weather[0].main.toLowerCase().includes("cloud")) {
                 $scope.image = "images/cloudy.png";
-                $scope.description = "Cloud cloud makes me pout!";
+                $scope.description = "A little bit of clouds in the sky never hurt anyone. Let's see what we can find for you.";
             }
             else if (response.data.list[dayIndex].weather[0].main.toLowerCase().includes("snow")) {
                 $scope.image = "images/snowy.png";
-                $scope.description = "Snow snow say oh!";
+                $scope.description = "Snow days won't stop you from having fun! We'll find some stuff for you to do.";
             }
         });
         document.getElementsByClassName('goActivity')[0].style.visibility = 'visible';
@@ -201,7 +201,7 @@ app.controller('activityController', function($scope, $http, weatherCondition, c
 app.controller('gamesController', function($scope, $http, choosenActivity, gettingLocation) {
     $scope.title = "Games";
     var activity = choosenActivity.getActivity();
-    $scope.activityName = activity.name;
+    $scope.activityName = activity.name + " Games";
     gettingLocation.setActivityType(activity.type);
     $scope.activityGame = activity.miniGames;
 });

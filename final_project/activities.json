@@ -3,7 +3,7 @@
         {
             "snow": {
                 "basketball": {
-                    "name": "Basketball (Indoor)",
+                    "name": "Basketball (In)",
                     "type": "gym",
                     "miniGames": {
                         "gameOne": {
@@ -27,7 +27,7 @@
                     }
                 },
                 "soccer": {
-                    "name": "Soccer (Indoor)",
+                    "name": "Soccer (In)",
                     "type": "gym",
                     "miniGames": {
                         "gameOne": {
@@ -53,7 +53,7 @@
             },
             "rain": {
                 "basketball": {
-                    "name": "Basketball (Indoor)",
+                    "name": "Basketball (In)",
                     "type": "gym",
                     "miniGames": {
                         "gameOne": {
@@ -77,7 +77,7 @@
                     }
                 },
                 "soccer": {
-                    "name": "Soccer (Indoor)",
+                    "name": "Soccer (In)",
                     "type": "gym",
                     "miniGames": {
                         "gameOne": {
@@ -129,7 +129,7 @@
             },
             "sun": {
                 "basketball": {
-                    "name": "Basketball (Outdoor)",
+                    "name": "Basketball (Out)",
                     "type": "park",
                     "miniGames": {
                         "gameOne": {
@@ -153,7 +153,7 @@
                     }
                 },
                 "soccer": {
-                    "name": "Soccer (Outdoor)",
+                    "name": "Soccer (Out)",
                     "type": "park",
                     "miniGames": {
                         "gameOne": {

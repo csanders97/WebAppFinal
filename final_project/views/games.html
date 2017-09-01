@@ -2,21 +2,35 @@
     <h1>{{ title }}</h1>
 </div>
 <div class="container">
-    <div class="activity">
-        <div>{{ activityName }}</div>
-        <div ng-repeat="game in activityGame">
-            <div class="games">
-                <h1>{{ game.name }}</h1>
-                <h2>Rules:</h2>
-                <ul>
-                    <li>{{ game.ruleOne }}</li>
-                    <li>{{ game.ruleTwo }}</li>
-                    <li>{{ game.ruleThree }}</li>
-                </ul>
+    <h1>In case you get bored with just the normal activity, here are some other games you can play!</h1>
+    <div class="displayActivity">
+        <div class="activity">
+            <h1>{{ activityName }}</h1>
+            <div ng-repeat="game in activityGame">
+                <div class="games">
+                    <h2>{{ game.name }}</h2>
+                    <h3>Rules:</h3>
+                    <ul class="gaming">
+                        <li>{{ game.ruleOne }}</li>
+                        <li>{{ game.ruleTwo }}</li>
+                        <li>{{ game.ruleThree }}</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div>
-            <a href="#!location">Please</a>
+            <div class="navigate">
+                <div class="goLocation">
+                    <p>Like this activity? Click this link to find locations for it!</p>
+                    <div class="getLocations">
+                        <a href="#!location">Find Locations</a>
+                    </div>
+                </div>
+                <div class="backToActivityPage">
+                    <p>Not a fan? This activity isn't for everyone. Click this link to find another.</p>
+                    <div class="goBackToActivity">
+                        <a href="#!activity">Back To Activities</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

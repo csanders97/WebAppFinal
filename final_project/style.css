@@ -1,17 +1,30 @@
+h1, h2, h3, h4, p {
+  font-family: 'Ubuntu';
+  color: #32f38d;
+}
+
 .goActivity {
     visibility: hidden;
 }
 
+.container {
+  text-align: center;
+}
+
 #map {
   text-align: center;
-  width: 500px;
+  width: 1700px;
   height: 500px;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+html {
+  background-color: #002233;
+}
+
+.main-container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #444444;
 }
 
 #right-panel {
@@ -75,4 +88,182 @@ h2 {
 #more {
   width: 100%;
   margin: 5px 0 0 0;
+}
+
+.gameActivities {
+  padding: 20px;
+  margin: 5px;
+  column-count: 7;
+  column-gap: 40px;
+}
+
+.allActivities, .optionalActivities {
+  cursor: pointer;
+  font-family: 'Ubuntu';
+  background-color: #0af;
+  border: 2px solid black;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.backToWeather {
+  font-family: 'Ubuntu';
+}
+
+.header {
+  color: white;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #0af;
+  padding: 10px;
+  margin: 5px;
+}
+
+.header h1 {
+  color: white;
+}
+
+.item {
+  border: 2px solid white;
+}
+
+.desc {
+  padding: 10px;
+  color: #0af;
+}
+
+.info h2 {
+  text-align: center;
+}
+
+.info {
+  text-align: left;
+}
+
+.info h1 {
+  text-align: center;
+}
+
+.weather {
+  text-align: center;
+  font-size: 25px;
+  color: #32f38d;
+}
+
+.weather * {
+  padding: 20px;
+  margin: 10px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.backToWeather {
+  text-align: center;
+}
+
+.navigate {
+  text-align: center;
+}
+
+.desc, .goToWeather {
+  text-align: center;
+}
+
+.displayActivity {
+  display: inline-block;
+}
+
+.gaming {
+  list-style-type: none;
+  font-size: 20px;
+  color: #32f38d;
+  text-align: center;
+}
+
+.gaming * {
+  padding: 5px;
+  margin: 5px;
+}
+
+.games {
+  border: 2px dashed #0af;
+  padding: 10px;
+  margin: 5px;
+}
+
+.activityName {
+  font-size: 20px;
+}
+
+.activity {
+  padding: 10px;
+  margin: 5px;
+}
+
+.backToActivity {
+  background-color: #32f38d;
+  border: 2px solid #0af;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.goBackWeather {
+  background-color: #32f38d;
+  border: 2px solid #0af;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+.getLocations {
+  background-color: #32f38d;
+  border: 2px solid #0af;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+.goBackToActivity {
+  background-color: #32f38d;
+  border: 2px solid #0af;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+.backToActivityPage {
+  text-align: center;
+}
+
+.startWeather {
+  background-color: #32f38d;
+  border: 2px solid #0af;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+.findWeather {
+  font-size: 20px;
+}
+
+.getActivities {
+  background-color: #32f38d;
+  border: 2px solid #0af;
+  cursor: pointer;
+}
+
+.getActivities p {
+  z-index: 5;
+  color: black;
 }
