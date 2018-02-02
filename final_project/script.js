@@ -142,7 +142,7 @@ app.controller('weatherController', function($scope, $http, weatherCondition, ge
             $scope.description;
             $scope.min = "Minimum Temperature is " + weatherData.list[dayIndex].temp.min;
             $scope.max = "Maximum Temperature is " + weatherData.list[dayIndex].temp.max;
-            $scope.cond = weatherData.list[dayIndex].weather[0].main + " Weather";
+            $scope.cond = weatherData.list[dayIndex].weather[0].main;
             lat = weatherData.city.coord.lat;
             long = weatherData.city.coord.lon;
             if (response.data.list[dayIndex].weather[0].main.toLowerCase().includes("clear")) {
@@ -177,7 +177,9 @@ app.controller('activityController', function($scope, $http, weatherCondition, c
     var weather = weatherCondition.getCondition();
     $http.get('activities.json')
     .then(function(response) {
-        var activityData = response.data.activity[0];
+        console.log(response);
+        var activityData = response.data;
+        console.log(activityData);
         $scope.allData = activityData.all;
         if (weather.toLowerCase().includes("rain")) {
             $scope.weatherData = activityData.rain;
@@ -221,7 +223,7 @@ app.controller('locationController', function($scope, weatherCondition, gettingL
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
         location: pyrmont,
-        radius: 500,
+        radius: 1000,
         type: [type]
     }, processResults);
     

@@ -1,448 +1,444 @@
-{
-    "activity": [
-        {
-            "snow": {
-                "basketball": {
-                    "name": "Basketball (In)",
-                    "type": "gym",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Knockout",
-                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
-                            "ruleTwo": "If second player makes it before first player, first player is out",
-                            "ruleThree": "Continue on until one player is left standing."
-                        },
-                        "gameTwo": {
-                            "name": "In and Out",
-                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
-                            "ruleTwo": "The first three pass the ball around and try to score.",
-                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
-                        },
-                        "gameThree": {
-                            "name": "Horse",
-                            "ruleOne": "Can have any number of players in one game.",
-                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
-                            "ruleThree": "Last player left without spelling out horse is the winner."
-                        }
-                    }
+{ 
+    "snow": {
+        "basketball": {
+            "name": "Basketball (In)",
+            "type": "gym",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Knockout",
+                    "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                    "ruleTwo": "If second player makes it before first player, first player is out",
+                    "ruleThree": "Continue on until one player is left standing."
                 },
-                "soccer": {
-                    "name": "Soccer (In)",
-                    "type": "gym",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Keep Ups",
-                            "ruleOne": "Can have multiple players at a time.",
-                            "ruleTwo": "Try to bounce the ball as long as possible on your foot.",
-                            "ruleThree": "Last person to keep it on wins."
-                        },
-                        "gameTwo": {
-                            "name": "Crossbar Challenge",
-                            "ruleOne": "Up to 8 players for maximum fun.",
-                            "ruleTwo": "Players take turns trying to kick the ball at the crossbar.",
-                            "ruleThree": "First person to hit the crossbar wins."
-                        },
-                        "gameThree": {
-                            "name": "Dart Challenge",
-                            "ruleOne": "Up to 7 other players for safety.",
-                            "ruleTwo": "Players take turns shooting at someone running across the goal.",
-                            "ruleThree": "First person to hit them wins. Runner wins if they don't get hit."
-                        }
-                    }
+                "gameTwo": {
+                    "name": "In and Out",
+                    "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                    "ruleTwo": "The first three pass the ball around and try to score.",
+                    "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                },
+                "gameThree": {
+                    "name": "Horse",
+                    "ruleOne": "Can have any number of players in one game.",
+                    "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                    "ruleThree": "Last player left without spelling out horse is the winner."
                 }
-            },
-            "rain": {
-                "basketball": {
-                    "name": "Basketball (In)",
-                    "type": "gym",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Knockout",
-                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
-                            "ruleTwo": "If second player makes it before first player, first player is out",
-                            "ruleThree": "Continue on until one player is left standing."
-                        },
-                        "gameTwo": {
-                            "name": "In and Out",
-                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
-                            "ruleTwo": "The first three pass the ball around and try to score.",
-                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
-                        },
-                        "gameThree": {
-                            "name": "Horse",
-                            "ruleOne": "Can have any number of players in one game.",
-                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
-                            "ruleThree": "Last player left without spelling out horse is the winner."
-                        }
-                    }
+            }
+        },
+        "soccer": {
+            "name": "Soccer (In)",
+            "type": "gym",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Keep Ups",
+                    "ruleOne": "Can have multiple players at a time.",
+                    "ruleTwo": "Try to bounce the ball as long as possible on your foot.",
+                    "ruleThree": "Last person to keep it on wins."
                 },
-                "soccer": {
-                    "name": "Soccer (In)",
-                    "type": "gym",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Keep Ups",
-                            "ruleOne": "Can have multiple players at a time.",
-                            "ruleTwo": "Try to bounce the ball as long as possible on your foot.",
-                            "ruleThree": "Last person to keep it on wins."
-                        },
-                        "gameTwo": {
-                            "name": "Crossbar Challenge",
-                            "ruleOne": "Up to 8 players for maximum fun.",
-                            "ruleTwo": "Players take turns trying to kick the ball at the crossbar.",
-                            "ruleThree": "First person to hit the crossbar wins."
-                        },
-                        "gameThree": {
-                            "name": "Dart Challenge",
-                            "ruleOne": "Up to 7 other players for safety.",
-                            "ruleTwo": "Players take turns shooting at someone running across the goal.",
-                            "ruleThree": "First person to hit them wins. Runner wins if they don't get hit."
-                        }
-                    }
-                }
-            },
-            "cloud": {
-                "park": {
-                    "name": "Park",
-                    "type": "park",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Tag",
-                            "ruleOne": "No limit on players",
-                            "ruleTwo": "One person who is it runs around and trys to tag other players.",
-                            "ruleThree": "Person who is tagged is now it and has to try and tag someone else."
-                        },
-                        "gameTwo": {
-                            "name": "Volleyball",
-                            "ruleOne": "Max of six players on each team. Two teams at a time.",
-                            "ruleTwo": "Players hit a volleyball back and forth over the net.",
-                            "ruleThree": "First team to 11 wins."
-                        },
-                        "gameThree": {
-                            "name": "Badminton",
-                            "ruleOne": "Max of eight players on each team. Two teams at a time.",
-                            "ruleTwo": "Players use racquets to hit the bird back and forth over the net.",
-                            "ruleThree": "First team to 11 wins."
-                        }
-                    }
-                }
-            },
-            "sun": {
-                "basketball": {
-                    "name": "Basketball (Out)",
-                    "type": "park",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Knockout",
-                            "ruleOne": "Two people with a ball shoot in a row and try to score.",
-                            "ruleTwo": "If second player makes it before first player, first player is out",
-                            "ruleThree": "Continue on until one player is left standing."
-                        },
-                        "gameTwo": {
-                            "name": "In and Out",
-                            "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
-                            "ruleTwo": "The first three pass the ball around and try to score.",
-                            "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
-                        },
-                        "gameThree": {
-                            "name": "Horse",
-                            "ruleOne": "Can have any number of players in one game.",
-                            "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
-                            "ruleThree": "Last player left without spelling out horse is the winner."
-                        }
-                    }
+                "gameTwo": {
+                    "name": "Crossbar Challenge",
+                    "ruleOne": "Up to 8 players for maximum fun.",
+                    "ruleTwo": "Players take turns trying to kick the ball at the crossbar.",
+                    "ruleThree": "First person to hit the crossbar wins."
                 },
-                "soccer": {
-                    "name": "Soccer (Out)",
-                    "type": "park",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Keep Ups",
-                            "ruleOne": "Can have multiple players at a time.",
-                            "ruleTwo": "Try to bounce the ball as long as possible on your foot.",
-                            "ruleThree": "Last person to keep it on wins."
-                        },
-                        "gameTwo": {
-                            "name": "Crossbar Challenge",
-                            "ruleOne": "Up to 8 players for maximum fun.",
-                            "ruleTwo": "Players take turns trying to kick the ball at the crossbar.",
-                            "ruleThree": "First person to hit the crossbar wins."
-                        },
-                        "gameThree": {
-                            "name": "Dart Challenge",
-                            "ruleOne": "Up to 7 other players for safety.",
-                            "ruleTwo": "Players take turns shooting at someone running across the goal.",
-                            "ruleThree": "First person to hit them wins. Runner wins if they don't get hit."
-                        }
-                    }
-                },
-                "baseball": {
-                    "name": "Baseball",
-                    "type": "park",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Fly Ball",
-                            "ruleOne": "Can have multiple players at a time.",
-                            "ruleTwo": "One player has a bat and hits pop flys to the other players to catch.",
-                            "ruleThree": "The first player to catch three now has a turn to bat."
-                        },
-                        "gameTwo": {
-                            "name": "Ground Ball",
-                            "ruleOne": "Can have multiple players at a time.",
-                            "ruleTwo": "One player has a bat and hits grounders to the other players to catch.",
-                            "ruleThree": "The first player to catch three now has a turn to bat to the others."
-                        },
-                        "gameThree": {
-                            "name": "Mound Ball",
-                            "ruleOne": "Can have any number of players in one game.",
-                            "ruleTwo": "Players make bets and take turns tossing the ball onto the mound.",
-                            "ruleThree": "If a player hits and stays on the mound, they win all bets."
-                        }
-                    }
-                },
-                "football": {
-                    "name": "Football",
-                    "type": "park",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Three Flags Up",
-                            "ruleOne": "Multiple players can play at one time.",
-                            "ruleTwo": "One player throws the football towards the other players.",
-                            "ruleThree": "First to catch three is now the thrower."
-                        },
-                        "gameTwo": {
-                            "name": "Catch Up",
-                            "ruleOne": "Two people at a time.",
-                            "ruleTwo": "Both players run out and try to catch the ball being thrown to them.",
-                            "ruleThree": "First player to catch it wins."
-                        },
-                        "gameThree": {
-                            "name": "Tackle Bag",
-                            "ruleOne": "One player at a time. Multiple players in intervals.",
-                            "ruleTwo": "Players take turns running into a bag to tackle.",
-                            "ruleThree": "Player with the best tackle wins."
-                        }
-                    }
-                },
-                "frisbee": {
-                    "name": "Frisbee",
-                    "type": "park",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Ultimate Frisbee",
-                            "ruleOne": "Two teams with a max of 10 players on each team.",
-                            "ruleTwo": "The team with the frisbee tries to reach the end zone. No moving with the frisbee in hand.",
-                            "ruleThree": "First team to score wins."
-                        },
-                        "gameTwo": {
-                            "name": "Catch",
-                            "ruleOne": "No limit of players for this game.",
-                            "ruleTwo": "Pass the frisbee back and forth between all people playing.",
-                            "ruleThree": "No winners here, this is just for fun."
-                        },
-                        "gameThree": {
-                            "name": "Hammer Time",
-                            "ruleOne": "No limit of players for this game.",
-                            "ruleTwo": "Players try passing the frisbee back and forth with hammer tosses.",
-                            "ruleThree": "No winners here, this is just for fun."
-                        }
-                    }
-                },
-                "golf": {
-                    "name": "Golf",
-                    "type": "golf_course",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Chip On",
-                            "ruleOne": "Multiple players are allowed for this game",
-                            "ruleTwo": "Players take turns trying to chip onto the green as close to the hole as possible.",
-                            "ruleThree": "Closest ball or first to make it in wins."
-                        },
-                        "gameTwo": {
-                            "name": "Long Drive",
-                            "ruleOne": "Multiple players allowed for this game.",
-                            "ruleTwo": "Players take turns driving the ball as far as possible.",
-                            "ruleThree": "Furthest ball wins the game."
-                        },
-                        "gameThree": {
-                            "name": "Put Put",
-                            "ruleOne": "Multiple players allowed for this game.",
-                            "ruleTwo": "Players take turns putting on the green trying to get as close to the hole as possible.",
-                            "ruleThree": "Closest ball or first to make it in wins."
-                        }
-                    }
-                },
-                "amusementPark": {
-                    "name": "Amusement Park",
-                    "type": "amusement_park",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Guess My Age",
-                            "ruleOne": "This is aimed more for two players at a time.",
-                            "ruleTwo": "While waiting in line, workers try to guess your age.",
-                            "ruleThree": "They win if they get in a 5 year range of your actual age."
-                        },
-                        "gameTwo": {
-                            "name": "Guess My Height",
-                            "ruleOne": "This is a two player game.",
-                            "ruleTwo": "The bouncer tries to guess your height to determine if you're tall enough to get on the ride.",
-                            "ruleThree": "You only win if they decide that you're fine to get on the ride."
-                        },
-                        "gameThree": {
-                            "name": "Keep It Down",
-                            "ruleOne": "Can have any number of players at a time.",
-                            "ruleTwo": "Players ride as many roller coasters as possible on a full stomach.",
-                            "ruleThree": "Winner is the player that can manage to keep their food down."
-                        }
-                    }
-                },
-                "park": {
-                    "name": "Park",
-                    "type": "park",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Tag",
-                            "ruleOne": "No limit on players",
-                            "ruleTwo": "One person who is it runs around and trys to tag other players.",
-                            "ruleThree": "Person who is tagged is now it and has to try and tag someone else."
-                        },
-                        "gameTwo": {
-                            "name": "Volleyball",
-                            "ruleOne": "Max of six players on each team. Two teams at a time.",
-                            "ruleTwo": "Players hit a volleyball back and forth over the net.",
-                            "ruleThree": "First team to 11 wins."
-                        },
-                        "gameThree": {
-                            "name": "Badminton",
-                            "ruleOne": "Max of eight players on each team. Two teams at a time.",
-                            "ruleTwo": "Players use racquets to hit the bird back and forth over the net.",
-                            "ruleThree": "First team to 11 wins."
-                        }
-                    }
-                }
-            },
-            "all": {
-                "bowling": {
-                    "name": "Bowling",
-                    "type": "bowling_alley",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Split",
-                            "ruleOne": "Up to four players in one lane at a time.",
-                            "ruleTwo": "When a split is encountered, players take turns trying to knock it down.",
-                            "ruleThree": "Winner is whoever can knock down both pins in one bowl."
-                        },
-                        "gameTwo": {
-                            "name": "Gobble Gobble",
-                            "ruleOne": "Up to four players in one lane at a time.",
-                            "ruleTwo": "Players try to get as much turkeys as they can in a single game.",
-                            "ruleThree": "Winner goes to whoever gets the most turkeys."
-                        },
-                        "gameThree": {
-                            "name": "Got a Spare?",
-                            "ruleOne": "Up to four players in one lane at a time.",
-                            "ruleTwo": "Players stray from the actual game and try to hit as many spares as possible.",
-                            "ruleThree": "Player with most spares wins."
-                        }
-                    }
-                },
-                "aquarium": {
-                    "name": "Aquarium",
-                    "type": "aquarium",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Stingray Count",
-                            "ruleOne": "As many players desired are welcome to play.",
-                            "ruleTwo": "Players try to count up how many stingrays there are in the aquarium.",
-                            "ruleThree": "Player with most stingrays found wins."
-                        },
-                        "gameTwo": {
-                            "name": "Finding Nemo",
-                            "ruleOne": "As many players desired are welcome to play.",
-                            "ruleTwo": "Players try to find as many clown fish as there are in the aquarium.",
-                            "ruleThree": "Player with the most Nemos at the end wins."
-                        },
-                        "gameThree": {
-                            "name": "Dare",
-                            "ruleOne": "As many players desired are welcome to play.",
-                            "ruleTwo": "Players dare each other to touch free creatures through the trip.",
-                            "ruleThree": "Losers are those who refuse to touch. Winner is last man standing."
-                        }
-                    }
-                },
-                "casino": {
-                    "name": "Casino",
-                    "type": "casino",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Blackjack",
-                            "ruleOne": "Two to four people playing with dealer",
-                            "ruleTwo": "Players are given two cards and are trying to reach twenty-one without going over.",
-                            "ruleThree": "Winner is player that is closest to twenty-one without going over."
-                        },
-                        "gameTwo": {
-                            "name": "Poker",
-                            "ruleOne": "Up to five to six players at max during each game.",
-                            "ruleTwo": "Each player is given seven cards and try to get the best hand and coerce others to either drop or raise stakes.",
-                            "ruleThree": "Player with the best hand wins the game and the money."
-                        },
-                        "gameThree": {
-                            "name": "Texas Hold'Em",
-                            "ruleOne": "Six players are allowed for each game.",
-                            "ruleTwo": "Players get two cards faced down and try to get others to buckle.",
-                            "ruleThree": "Last player to remain without folding wins."
-                        }
-                    }
-                },
-                "gym": {
-                    "name": "Gym",
-                    "type": "gym",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Bench Press",
-                            "ruleOne": "Two people are required at a time. One exercising and one to spot.",
-                            "ruleTwo": "Person excercising lowers the bar to their chest and then pushes back up.",
-                            "ruleThree": "Continue for ten reps then switch places with spotter."
-                        },
-                        "gameTwo": {
-                            "name": "Bicep Curls",
-                            "ruleOne": "One person is all that's needed.",
-                            "ruleTwo": "Using your biceps, you curl the bar in your hand up to your chin and then back down.",
-                            "ruleThree": "Continue for ten reps then take a minute break to relax."
-                        },
-                        "gameThree": {
-                            "name": "Pull Ups",
-                            "ruleOne": "One person is all that's needed.",
-                            "ruleTwo": "Using only your arms and core, bring your body up until your chin is at bar level.",
-                            "ruleThree": "Continue for five to ten reps then take a short break."
-                        }
-                    }
-                },
-                "movieTheater": {
-                    "name": "Movie Theater",
-                    "type": "movie_theater",
-                    "miniGames": {
-                        "gameOne": {
-                            "name": "Theater Hop",
-                            "ruleOne": "All people in your group are welcomed to play.",
-                            "ruleTwo": "Hop around to different rooms and watch a free movie after yours is done.",
-                            "ruleThree": "If you don't get caught, then you win!"
-                        },
-                        "gameTwo": {
-                            "name": "Preview Guess",
-                            "ruleOne": "All people in your group are welcomed to play.",
-                            "ruleTwo": "Players try to guess what movie the preview is about before it's revealed.",
-                            "ruleThree": "Player wins if they guess correctly."
-                        },
-                        "gameThree": {
-                            "name": "End Game",
-                            "ruleOne": "All people in your group are welcomed to play.",
-                            "ruleTwo": "Players try to guess what time the movie will end.",
-                            "ruleThree": "Player wins if they guess correctly."
-                        }
-                    }
+                "gameThree": {
+                    "name": "Dart Challenge",
+                    "ruleOne": "Up to 7 other players for safety.",
+                    "ruleTwo": "Players take turns shooting at someone running across the goal.",
+                    "ruleThree": "First person to hit them wins. Runner wins if they don't get hit."
                 }
             }
         }
-    ]
+    },
+    "rain": {
+        "basketball": {
+            "name": "Basketball (In)",
+            "type": "gym",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Knockout",
+                    "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                    "ruleTwo": "If second player makes it before first player, first player is out",
+                    "ruleThree": "Continue on until one player is left standing."
+                },
+                "gameTwo": {
+                    "name": "In and Out",
+                    "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                    "ruleTwo": "The first three pass the ball around and try to score.",
+                    "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                },
+                "gameThree": {
+                    "name": "Horse",
+                    "ruleOne": "Can have any number of players in one game.",
+                    "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                    "ruleThree": "Last player left without spelling out horse is the winner."
+                }
+            }
+        },
+        "soccer": {
+            "name": "Soccer (In)",
+            "type": "gym",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Keep Ups",
+                    "ruleOne": "Can have multiple players at a time.",
+                    "ruleTwo": "Try to bounce the ball as long as possible on your foot.",
+                    "ruleThree": "Last person to keep it on wins."
+                },
+                "gameTwo": {
+                    "name": "Crossbar Challenge",
+                    "ruleOne": "Up to 8 players for maximum fun.",
+                    "ruleTwo": "Players take turns trying to kick the ball at the crossbar.",
+                    "ruleThree": "First person to hit the crossbar wins."
+                },
+                "gameThree": {
+                    "name": "Dart Challenge",
+                    "ruleOne": "Up to 7 other players for safety.",
+                    "ruleTwo": "Players take turns shooting at someone running across the goal.",
+                    "ruleThree": "First person to hit them wins. Runner wins if they don't get hit."
+                }
+            }
+        }
+    },
+    "cloud": {
+        "park": {
+            "name": "Park",
+            "type": "park",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Tag",
+                    "ruleOne": "No limit on players",
+                    "ruleTwo": "One person who is it runs around and trys to tag other players.",
+                    "ruleThree": "Person who is tagged is now it and has to try and tag someone else."
+                },
+                "gameTwo": {
+                    "name": "Volleyball",
+                    "ruleOne": "Max of six players on each team. Two teams at a time.",
+                    "ruleTwo": "Players hit a volleyball back and forth over the net.",
+                    "ruleThree": "First team to 11 wins."
+                },
+                "gameThree": {
+                    "name": "Badminton",
+                    "ruleOne": "Max of eight players on each team. Two teams at a time.",
+                    "ruleTwo": "Players use racquets to hit the bird back and forth over the net.",
+                    "ruleThree": "First team to 11 wins."
+                }
+            }
+        }
+    },
+    "sun": {
+        "basketball": {
+            "name": "Basketball (Out)",
+            "type": "park",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Knockout",
+                    "ruleOne": "Two people with a ball shoot in a row and try to score.",
+                    "ruleTwo": "If second player makes it before first player, first player is out",
+                    "ruleThree": "Continue on until one player is left standing."
+                },
+                "gameTwo": {
+                    "name": "In and Out",
+                    "ruleOne": "Three people stand in a triangle pattern while one person is in the middle.",
+                    "ruleTwo": "The first three pass the ball around and try to score.",
+                    "ruleThree": "If middle player grabs the ball, the last person to touch it is out and the middle takes their place."
+                },
+                "gameThree": {
+                    "name": "Horse",
+                    "ruleOne": "Can have any number of players in one game.",
+                    "ruleTwo": "Players take turn shooting at the basket. Everytime you miss, a letter of horse is added on.",
+                    "ruleThree": "Last player left without spelling out horse is the winner."
+                }
+            }
+        },
+        "soccer": {
+            "name": "Soccer (Out)",
+            "type": "park",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Keep Ups",
+                    "ruleOne": "Can have multiple players at a time.",
+                    "ruleTwo": "Try to bounce the ball as long as possible on your foot.",
+                    "ruleThree": "Last person to keep it on wins."
+                },
+                "gameTwo": {
+                    "name": "Crossbar Challenge",
+                    "ruleOne": "Up to 8 players for maximum fun.",
+                    "ruleTwo": "Players take turns trying to kick the ball at the crossbar.",
+                    "ruleThree": "First person to hit the crossbar wins."
+                },
+                "gameThree": {
+                    "name": "Dart Challenge",
+                    "ruleOne": "Up to 7 other players for safety.",
+                    "ruleTwo": "Players take turns shooting at someone running across the goal.",
+                    "ruleThree": "First person to hit them wins. Runner wins if they don't get hit."
+                }
+            }
+        },
+        "baseball": {
+            "name": "Baseball",
+            "type": "park",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Fly Ball",
+                    "ruleOne": "Can have multiple players at a time.",
+                    "ruleTwo": "One player has a bat and hits pop flys to the other players to catch.",
+                    "ruleThree": "The first player to catch three now has a turn to bat."
+                },
+                "gameTwo": {
+                    "name": "Ground Ball",
+                    "ruleOne": "Can have multiple players at a time.",
+                    "ruleTwo": "One player has a bat and hits grounders to the other players to catch.",
+                    "ruleThree": "The first player to catch three now has a turn to bat to the others."
+                },
+                "gameThree": {
+                    "name": "Mound Ball",
+                    "ruleOne": "Can have any number of players in one game.",
+                    "ruleTwo": "Players make bets and take turns tossing the ball onto the mound.",
+                    "ruleThree": "If a player hits and stays on the mound, they win all bets."
+                }
+            }
+        },
+        "football": {
+            "name": "Football",
+            "type": "park",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Three Flags Up",
+                    "ruleOne": "Multiple players can play at one time.",
+                    "ruleTwo": "One player throws the football towards the other players.",
+                    "ruleThree": "First to catch three is now the thrower."
+                },
+                "gameTwo": {
+                    "name": "Catch Up",
+                    "ruleOne": "Two people at a time.",
+                    "ruleTwo": "Both players run out and try to catch the ball being thrown to them.",
+                    "ruleThree": "First player to catch it wins."
+                },
+                "gameThree": {
+                    "name": "Tackle Bag",
+                    "ruleOne": "One player at a time. Multiple players in intervals.",
+                    "ruleTwo": "Players take turns running into a bag to tackle.",
+                    "ruleThree": "Player with the best tackle wins."
+                }
+            }
+        },
+        "frisbee": {
+            "name": "Frisbee",
+            "type": "park",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Ultimate Frisbee",
+                    "ruleOne": "Two teams with a max of 10 players on each team.",
+                    "ruleTwo": "The team with the frisbee tries to reach the end zone. No moving with the frisbee in hand.",
+                    "ruleThree": "First team to score wins."
+                },
+                "gameTwo": {
+                    "name": "Catch",
+                    "ruleOne": "No limit of players for this game.",
+                    "ruleTwo": "Pass the frisbee back and forth between all people playing.",
+                    "ruleThree": "No winners here, this is just for fun."
+                },
+                "gameThree": {
+                    "name": "Hammer Time",
+                    "ruleOne": "No limit of players for this game.",
+                    "ruleTwo": "Players try passing the frisbee back and forth with hammer tosses.",
+                    "ruleThree": "No winners here, this is just for fun."
+                }
+            }
+        },
+        "golf": {
+            "name": "Golf",
+            "type": "golf_course",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Chip On",
+                    "ruleOne": "Multiple players are allowed for this game",
+                    "ruleTwo": "Players take turns trying to chip onto the green as close to the hole as possible.",
+                    "ruleThree": "Closest ball or first to make it in wins."
+                },
+                "gameTwo": {
+                    "name": "Long Drive",
+                    "ruleOne": "Multiple players allowed for this game.",
+                    "ruleTwo": "Players take turns driving the ball as far as possible.",
+                    "ruleThree": "Furthest ball wins the game."
+                },
+                "gameThree": {
+                    "name": "Put Put",
+                    "ruleOne": "Multiple players allowed for this game.",
+                    "ruleTwo": "Players take turns putting on the green trying to get as close to the hole as possible.",
+                    "ruleThree": "Closest ball or first to make it in wins."
+                }
+            }
+        },
+        "amusementPark": {
+            "name": "Amusement Park",
+            "type": "amusement_park",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Guess My Age",
+                    "ruleOne": "This is aimed more for two players at a time.",
+                    "ruleTwo": "While waiting in line, workers try to guess your age.",
+                    "ruleThree": "They win if they get in a 5 year range of your actual age."
+                },
+                "gameTwo": {
+                    "name": "Guess My Height",
+                    "ruleOne": "This is a two player game.",
+                    "ruleTwo": "The bouncer tries to guess your height to determine if you're tall enough to get on the ride.",
+                    "ruleThree": "You only win if they decide that you're fine to get on the ride."
+                },
+                "gameThree": {
+                    "name": "Keep It Down",
+                    "ruleOne": "Can have any number of players at a time.",
+                    "ruleTwo": "Players ride as many roller coasters as possible on a full stomach.",
+                    "ruleThree": "Winner is the player that can manage to keep their food down."
+                }
+            }
+        },
+        "park": {
+            "name": "Park",
+            "type": "park",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Tag",
+                    "ruleOne": "No limit on players",
+                    "ruleTwo": "One person who is it runs around and trys to tag other players.",
+                    "ruleThree": "Person who is tagged is now it and has to try and tag someone else."
+                },
+                "gameTwo": {
+                    "name": "Volleyball",
+                    "ruleOne": "Max of six players on each team. Two teams at a time.",
+                    "ruleTwo": "Players hit a volleyball back and forth over the net.",
+                    "ruleThree": "First team to 11 wins."
+                },
+                "gameThree": {
+                    "name": "Badminton",
+                    "ruleOne": "Max of eight players on each team. Two teams at a time.",
+                    "ruleTwo": "Players use racquets to hit the bird back and forth over the net.",
+                    "ruleThree": "First team to 11 wins."
+                }
+            }
+        }
+    },
+    "all": {
+        "bowling": {
+            "name": "Bowling",
+            "type": "bowling_alley",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Split",
+                    "ruleOne": "Up to four players in one lane at a time.",
+                    "ruleTwo": "When a split is encountered, players take turns trying to knock it down.",
+                    "ruleThree": "Winner is whoever can knock down both pins in one bowl."
+                },
+                "gameTwo": {
+                    "name": "Gobble Gobble",
+                    "ruleOne": "Up to four players in one lane at a time.",
+                    "ruleTwo": "Players try to get as much turkeys as they can in a single game.",
+                    "ruleThree": "Winner goes to whoever gets the most turkeys."
+                },
+                "gameThree": {
+                    "name": "Got a Spare?",
+                    "ruleOne": "Up to four players in one lane at a time.",
+                    "ruleTwo": "Players stray from the actual game and try to hit as many spares as possible.",
+                    "ruleThree": "Player with most spares wins."
+                }
+            }
+        },
+        "aquarium": {
+            "name": "Aquarium",
+            "type": "aquarium",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Stingray Count",
+                    "ruleOne": "As many players desired are welcome to play.",
+                    "ruleTwo": "Players try to count up how many stingrays there are in the aquarium.",
+                    "ruleThree": "Player with most stingrays found wins."
+                },
+                "gameTwo": {
+                    "name": "Finding Nemo",
+                    "ruleOne": "As many players desired are welcome to play.",
+                    "ruleTwo": "Players try to find as many clown fish as there are in the aquarium.",
+                    "ruleThree": "Player with the most Nemos at the end wins."
+                },
+                "gameThree": {
+                    "name": "Dare",
+                    "ruleOne": "As many players desired are welcome to play.",
+                    "ruleTwo": "Players dare each other to touch free creatures through the trip.",
+                    "ruleThree": "Losers are those who refuse to touch. Winner is last man standing."
+                }
+            }
+        },
+        "casino": {
+            "name": "Casino",
+            "type": "casino",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Blackjack",
+                    "ruleOne": "Two to four people playing with dealer",
+                    "ruleTwo": "Players are given two cards and are trying to reach twenty-one without going over.",
+                    "ruleThree": "Winner is player that is closest to twenty-one without going over."
+                },
+                "gameTwo": {
+                    "name": "Poker",
+                    "ruleOne": "Up to five to six players at max during each game.",
+                    "ruleTwo": "Each player is given seven cards and try to get the best hand and coerce others to either drop or raise stakes.",
+                    "ruleThree": "Player with the best hand wins the game and the money."
+                },
+                "gameThree": {
+                    "name": "Texas Hold'Em",
+                    "ruleOne": "Six players are allowed for each game.",
+                    "ruleTwo": "Players get two cards faced down and try to get others to buckle.",
+                    "ruleThree": "Last player to remain without folding wins."
+                }
+            }
+        },
+        "gym": {
+            "name": "Gym",
+            "type": "gym",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Bench Press",
+                    "ruleOne": "Two people are required at a time. One exercising and one to spot.",
+                    "ruleTwo": "Person excercising lowers the bar to their chest and then pushes back up.",
+                    "ruleThree": "Continue for ten reps then switch places with spotter."
+                },
+                "gameTwo": {
+                    "name": "Bicep Curls",
+                    "ruleOne": "One person is all that's needed.",
+                    "ruleTwo": "Using your biceps, you curl the bar in your hand up to your chin and then back down.",
+                    "ruleThree": "Continue for ten reps then take a minute break to relax."
+                },
+                "gameThree": {
+                    "name": "Pull Ups",
+                    "ruleOne": "One person is all that's needed.",
+                    "ruleTwo": "Using only your arms and core, bring your body up until your chin is at bar level.",
+                    "ruleThree": "Continue for five to ten reps then take a short break."
+                }
+            }
+        },
+        "movieTheater": {
+            "name": "Movie Theater",
+            "type": "movie_theater",
+            "miniGames": {
+                "gameOne": {
+                    "name": "Theater Hop",
+                    "ruleOne": "All people in your group are welcomed to play.",
+                    "ruleTwo": "Hop around to different rooms and watch a free movie after yours is done.",
+                    "ruleThree": "If you don't get caught, then you win!"
+                },
+                "gameTwo": {
+                    "name": "Preview Guess",
+                    "ruleOne": "All people in your group are welcomed to play.",
+                    "ruleTwo": "Players try to guess what movie the preview is about before it's revealed.",
+                    "ruleThree": "Player wins if they guess correctly."
+                },
+                "gameThree": {
+                    "name": "End Game",
+                    "ruleOne": "All people in your group are welcomed to play.",
+                    "ruleTwo": "Players try to guess what time the movie will end.",
+                    "ruleThree": "Player wins if they guess correctly."
+                }
+            }
+        }
+    }
 }

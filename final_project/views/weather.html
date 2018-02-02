@@ -15,12 +15,18 @@
         </form>
         <p class="findWeather"> Searching weather for: {{ city }}... </p>
     </div>
-    <div class="weather">
-        <div>{{ day }}</div>
-        <div>{{ min }}</div>
-        <div>{{ max }}</div>
-        <img id="condition" src="{{ image }}" />
-        <div>{{ cond }}</div>
+    <div class="weather item">
+        <div class="temp-data item">
+            <div class="day-temp item">
+                <div>{{ day }}</div>
+                <div>{{ min }}</div>
+                <div>{{ max }}</div>
+            </div>
+            <div class="weather-view item">
+                <img id="condition" src="{{ image }}" />
+                <div>{{ cond }}</div>
+            </div>
+        </div>
         <div>{{ description }}</div>
     </div>
     <div class="goActivity">
